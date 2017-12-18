@@ -1,1 +1,1 @@
-[Live Page](brentguf.github.io/outdoors)
+[Live Page](https://brentguf.github.io/outdoors)
