@@ -1,0 +1,33 @@
+.story {
+  background-color: $color-grey-light-1;
+  font-size: $default-font-size;
+  margin: 0 auto;
+  padding: 9rem;
+  padding-left: 12rem;
+  transform: skewX(-12deg);
+  width: 75%;
+  
+  &:not(:last-child) {
+    margin-bottom: 10rem;
+  }
+
+  &__shape {
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    float: left;
+    height: 15rem;
+    width: 15rem;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+    text-align: justify;
+  }
+}
