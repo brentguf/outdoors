@@ -101,6 +101,12 @@ body {
 .u-margin-bottom-large {
   margin-bottom: 8rem; }
 
+.u-margin-top-large {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .btn:link, .btn:visited {
   border-radius: 10rem;
   display: inline-block;
@@ -123,7 +129,6 @@ body {
   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn::after {
-  background-color: #fff;
   border-radius: 10rem;
   content: '';
   display: inline-block;
@@ -138,6 +143,14 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #55c57a; }
 
 .btn--animated {
   animation: moveInBottom .6s ease-out .6s;
@@ -356,4 +369,4 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   margin-top: -9.5rem;
-  padding: 25rem 10rem 50rem; }
+  padding: 25rem 10rem 15rem; }
