@@ -318,8 +318,7 @@ body {
   .story:not(:last-child) {
     margin-bottom: 10rem; }
   .story__shape {
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+    border-radius: 50%;
     float: left;
     overflow: hidden;
     position: relative;
