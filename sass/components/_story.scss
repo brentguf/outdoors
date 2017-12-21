@@ -1,6 +1,6 @@
 .story {
   box-shadow: 0 .1rem 6rem rgba($color-black, .2);
-  background-color: $color-grey-light-1;
+  background-color: rgba($color-grey-light-1, .7);
   font-size: $default-font-size;
   margin: 0 auto;
   padding: 9rem;
@@ -17,7 +17,6 @@
     float: left;
     overflow: hidden;
     position: relative;
-
     height: 15rem;
     width: 15rem;
     -webkit-shape-outside: circle(50% at 50% 50%);
