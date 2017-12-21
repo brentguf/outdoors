@@ -1,0 +1,61 @@
+.story {
+  box-shadow: 0 .1rem 6rem rgba($color-black, .2);
+  background-color: rgba($color-grey-light-1, .7);
+  font-size: $default-font-size;
+  margin: 0 auto;
+  padding: 9rem;
+  padding-left: 12rem;
+  transform: skewX(-12deg);
+  width: 75%;
+  
+  &:not(:last-child) {
+    margin-bottom: 10rem;
+  }
+
+  &__shape {
+    border-radius: 50%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+  }
+
+  &__img {
+    height: 100%;
+    transition: all .5s;
+    transform: translateX(-3rem) scale(1.4);
+  }
+
+  &__figcaption {
+    color: $color-white;
+    font-size: 1.7rem;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .5s;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+    text-align: justify;
+  }
+
+  &:hover &__figcaption {
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    -webkit-filter: blur(.5rem) brightness(.9);
+    filter: blur(.5rem) brightness(.9); 
+    transform: translateX(-3rem) scale(.9); 
+  }
+
+}
