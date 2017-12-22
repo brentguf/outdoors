@@ -478,6 +478,37 @@ body {
     text-align: center;
     transform: translate(-50%, -50%); }
 
+.footer {
+  background-color: #333;
+  padding: 10rem; }
+  .footer__logo {
+    display: block;
+    height: 100%;
+    width: 12rem;
+    margin: 0 auto; }
+  .footer__list {
+    border-top: 0.1rem solid rgba(238, 238, 238, 0.25);
+    display: inline-block; }
+  .footer__list-item {
+    display: inline-block;
+    padding-top: 1rem; }
+    .footer__list-item:not(:last-child) {
+      padding-right: 1rem; }
+  .footer__link {
+    font-size: 1.2rem;
+    color: #f7f7f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s; }
+    .footer__link:hover {
+      color: #55c57a;
+      transform: scale(1.1); }
+  .footer__copyright {
+    border-top: 0.1rem solid rgba(238, 238, 238, 0.25);
+    color: #f7f7f7;
+    font-size: 1.2rem;
+    padding-top: 1rem; }
+
 .section-about {
   background-color: #f7f7f7;
   margin-top: -25vh;
