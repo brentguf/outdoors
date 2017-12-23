@@ -1,7 +1,9 @@
 .btn {
+  &,
   &:link,
   &:visited {
     border-radius: 10rem;
+    cursor: pointer;
     display: inline-block;
     font-size: 1.6rem;
     padding: 1.5rem 4rem;
@@ -21,7 +23,9 @@
     }
   }
   
+  &:focus,
   &:active {
+    outline: none;
     transform: translateY(-.1rem);
     box-shadow: 0rem .5rem 1rem rgba($color-black, 0.2);
   }
