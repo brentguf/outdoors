@@ -1,21 +1,13 @@
 .navigation {
+  font-size: 3rem;
 
   &__checkbox {
     display: none;
   }
 
-  &__checkbox:checked ~ &__background {
-    width: 0;
-  }
-
-  &__checkbox:checked ~ &__nav {
-    display: none;
-  }
-
   &__button {
-    color: $color-black;
     background-color: $color-white;
-    border: 1px solid black;
+    box-shadow: 0 1rem 3rem rgba($color-black, .2);
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
@@ -23,10 +15,35 @@
     padding-top: 2.5rem;
     position: fixed;
     width: 6.5rem;
-    text-align: center;
-    top: 4rem;
-    right: 4rem;
+    top: 6rem;
+    right: 6rem;
     z-index: 200;
+  }
+
+  &__button-logo {
+    @include center-both;
+    background-color: $color-black;
+    display: block;
+    height: .2rem;
+    width: 2.75rem;
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: $color-black;
+      display: block;
+      height: .2rem;
+      position: absolute;
+      width: 2.75rem;
+    }
+
+    &::before {
+      top: -.8rem;     
+    }
+      
+    &::after {
+      top: .8rem;
+    }
   }
 
   &__background {
@@ -35,35 +52,44 @@
     height: 6.5rem;
     width: 6.5rem;
     position: fixed;
-    top: 4rem;
-    right: 4rem;
-    transform: scale(80);
+    top: 6rem;
+    right: 6rem;
+    transition: transform .8s cubic-bezier(.86, 0, .07, 1);
     z-index: 100;
   }
 
   &__nav {
-    @include center-both;
+    height: 100vh;
+    opacity: 0;
     position: fixed;
-    font-size: 3rem;
+    top: 0;
+    left: 0;
+    transition: all .8s cubic-bezier(.86, 0, .07, 1);
+    width: 0;
     z-index: 150;
   }
 
   &__list {
+    @include center-both;
+
     list-style: none;
     text-align: center;
+    width: 100%;
   }
 
   &__item {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   &__link {
     &:link,
     &:visited {
+      background-image: linear-gradient(120deg, transparent 50%,  $color-white 50%);
       background-size: 220%;
       color: $color-white;
+      display: inline-block;
       font-weight: 300;
-      padding: 1.5rem;
+      padding: 1rem 2rem;
       text-decoration: none;
       text-transform: uppercase;
       transition: all .5s;
@@ -71,14 +97,23 @@
 
     &:hover,
     &:active {
-      background-image: linear-gradient(120deg, transparent 50%,  $color-white 50%);
       background-position: 100%;
       color: $color-primary;
+      transform: translateX(1rem);
     }
 
     span {
       margin-right: 2rem;
     }
     
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
   }
 }
