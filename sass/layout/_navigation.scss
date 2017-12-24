@@ -20,13 +20,10 @@
     z-index: 200;
   }
 
-  &__button-logo {
+  &__logo {
     @include center-both;
-    background-color: $color-black;
-    display: block;
-    height: .2rem;
-    width: 2.75rem;
 
+    &,  
     &::before,
     &::after {
       content: "";
@@ -35,6 +32,7 @@
       height: .2rem;
       position: absolute;
       width: 2.75rem;
+      transition: transform .2s;
     }
 
     &::before {
@@ -115,5 +113,29 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+
+  &__checkbox:checked + &__button &__logo {
+    background-color: transparent;
+  
+    &::before {
+      top: 0;
+      transform: rotate(135deg);     
+    }
+      
+    &::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &__button:hover &__logo {
+    &::before {
+      top: -.9rem;     
+    }
+      
+    &::after {
+      top: .9rem;
+    }
   }
 }
