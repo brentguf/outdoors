@@ -12,3 +12,25 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin respond($breakpoint) {
+  // 1em = 16px
+
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content }; // 37.5em = 600px
+  }
+
+  @if $breakpoint == tablet-portrait {
+    @media (max-width: 56.25em) { @content }; // 56.25em = 600px
+  }
+
+   @if $breakpoint == tablet-landscape {
+    @media (max-width: 75em) { @content }; // 75em = 900px
+  }
+
+  // Everything between 900 and 1800px is considered a 'normal' laptop/desktop screen size.
+
+   @if $breakpoint == large-desktop {
+    @media (max-width: 112.5em) { @content }; // 112.5em = 1800px
+  }
+}
