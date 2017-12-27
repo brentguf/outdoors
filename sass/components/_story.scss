@@ -3,10 +3,17 @@
   background-color: rgba($color-grey-light-1, .7);
   font-size: $default-font-size;
   margin: 0 auto;
-  padding: 9rem;
-  padding-left: 12rem;
+  padding: 7rem;
+  padding-left: 10rem;
   transform: skewX(-12deg);
   width: 75%;
+
+  @include respond(tablet-portrait) {
+    padding: 4rem;
+    padding-left: 7rem;
+    width: 100%;
+    transform: skewX(0);
+  }
   
   &:not(:last-child) {
     margin-bottom: 10rem;
@@ -22,6 +29,10 @@
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+
+    @include respond(tablet-portrait) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -46,6 +57,10 @@
   &__text {
     transform: skewX(12deg);
     text-align: justify;
+    
+    @include respond(tablet-portrait) {
+      transform: skewX(0);
+    }   
   }
 
   &:hover &__figcaption {

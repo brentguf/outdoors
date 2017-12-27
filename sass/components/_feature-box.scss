@@ -6,6 +6,10 @@
   padding: 4rem 2.5rem;
   transition: .5s all;
 
+  @include respond(tablet-portrait) {
+    padding: 2rem;
+  }
+
   &__icon {
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     color: transparent;
@@ -13,6 +17,11 @@
     font-size: 6rem;
     margin-bottom: .5rem;
     -webkit-background-clip: text;
+
+    @include respond(tablet-portrait) {
+      margin-bottom: 0;
+    }
+
   }
 
   &:hover {

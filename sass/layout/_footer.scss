@@ -4,13 +4,17 @@
   font-size: 1.4rem;
   padding: 10rem;
 
-  &__navigation {
-    
+  @include respond(tablet-portrait) {
+    padding: 5rem;
   }
 
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include respond(tablet-portrait) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -22,6 +26,10 @@
     border-top: .1rem solid rgba($color-grey-light-2, .25);
     display: inline-block;
     padding-top: 1rem;
+
+    @include respond(tablet-portrait) {
+      
+    }
   }
 
   &__list-item {
@@ -55,5 +63,9 @@
     float: right;
     padding-top: 1rem;
     width: 80%;
+    
+    @include respond(tablet-portrait) {
+      float: none;
+    }
   }
 }
