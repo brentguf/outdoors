@@ -517,6 +517,7 @@ body {
     width: calc(100%*2/3); }
   .popup__img {
     display: block;
+    height: auto;
     width: 100%; }
   .popup__text {
     column-count: 2;
