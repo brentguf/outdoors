@@ -23,6 +23,10 @@
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
 
+  @include respond(large-desktop) {
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 85vh);
+  }
+
   &__logo-box {
     position: absolute;
     top: 4rem;
