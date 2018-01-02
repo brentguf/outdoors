@@ -17,6 +17,7 @@
     font-size: 6rem;
     margin-bottom: .5rem;
     -webkit-background-clip: text;
+    background-clip: text;
 
     @include respond(tablet-portrait) {
       margin-bottom: 0;
