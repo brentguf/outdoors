@@ -1,6 +1,10 @@
 .form {
   padding: 2rem 4rem;
 
+  @include respond('mobile') {
+    padding: 2rem;
+  }
+
   &__group:not(:last-child) {
     margin-bottom: 2rem;
   }
